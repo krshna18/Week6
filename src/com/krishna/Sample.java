@@ -19,6 +19,7 @@ public class Sample {
                 "String email",
                 "String department" ,
                 Krishna);
+        student.displaydata();
 
     }
 }

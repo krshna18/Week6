@@ -194,6 +194,6 @@ public class Student {
     }
 
     public void displaydata(){
-
+            System.out.println(getFullName()+ " "+ getGrade());
     }
 }
