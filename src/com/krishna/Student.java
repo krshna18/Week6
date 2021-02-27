@@ -36,6 +36,8 @@ public class Student {
         this.marks = marks;
     }
 
+
+
     public int getStudentId() {
         return studentId;
     }
@@ -158,41 +160,40 @@ public class Student {
     }
 
     public  void calculatePer(){
-        float percentage = 0.0f;
-        percentage = totalMarks/5;
-        setPercentage(percentage);
+        this.percentage = this.totalMarks/ marks.length;
     }
 
     public  void calculateGrade(){
-        float percentage = 0.0f;
-        percentage = getPercentage();
-        String grade = "";
-
-        if (percentage >= 94 && percentage<100){
-            grade = "A+";
-        } else if (percentage >= 87 && percentage<=93){
-            grade = "A";
-        }else if (percentage >= 80 && percentage<=86){
-            grade = "A-";
-        }else if (percentage >= 77 && percentage<=79){
-            grade = "B+";
-        }else if (percentage >= 73 && percentage<=76){
-            grade = "B";
-        }else if (percentage >= 70 && percentage<=72){
-            grade = "B-";
-        }else if (percentage >= 67 && percentage<=69){
-            grade = "C+";
-        }else if (percentage >= 63 && percentage<=66){
-            grade = "C";
-        }else if (percentage >= 60 && percentage<=62){
-            grade = "C-";
-        }else if (percentage >= 50 && percentage<=59){
-            grade = "D";
-        }else {
-            grade = "F";
+        if (this.percentage>=95.0){
+            this.grade = "A+";
+        } else if (this.percentage>=87.0){
+            this.grade = "A";
+        } else if (this.percentage>=80.0){
+            this.grade = "A-";
+        } else if (this.percentage>=77.0){
+            this.grade = "B+";
+        } else if (this.percentage>=73.0){
+            this.grade = "B";
+        } else if (this.percentage>=70.0){
+            this.grade = "B-";
+        } else if (this.percentage>=67.0){
+            this.grade = "C+";
+        } else if (this.percentage>=63.0){
+            this.grade = "C";
+        } else if (this.percentage>=60.0){
+            this.grade = "C-";
+        } else if (this.percentage>=50.0){
+            this.grade = "D";
+        } else {
+            this.grade = "F";
         }
 
-        setGrade(grade);
+
+
+
+    }
+
+    public void displaydata(){
 
     }
 }
