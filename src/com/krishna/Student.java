@@ -160,10 +160,12 @@ public class Student {
     }
 
     public  void calculatePer(){
+        calculateTotalMarks();
         this.percentage = this.totalMarks/ marks.length;
     }
 
     public  void calculateGrade(){
+        calculatePer();
         if (this.percentage>=95.0){
             this.grade = "A+";
         } else if (this.percentage>=87.0){
@@ -187,13 +189,9 @@ public class Student {
         } else {
             this.grade = "F";
         }
-
-
-
-
     }
 
     public void displaydata(){
-            System.out.println(getFullName()+ " "+ getGrade());
+            System.out.println(getFullName()+ " "+ this.grade);
     }
 }
